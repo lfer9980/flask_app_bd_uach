@@ -1,12 +1,9 @@
 {%extends "admin/layout.html" %}
-{% block styles %}
-	<link rel="stylesheet" href="../../static/css/admin.css">
-{% endblock %}
 {% block content %}
 
     {% if marcador %}
         {% include "admin/grafica.html" %}
     {% else %}
-        {% include "admin/vacio.html" %}
+        {% include "admin/error.html" %}
     {% endif %}
 {% endblock %}

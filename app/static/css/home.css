@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap");
+
+:root {
+    --fuente1: "Heebo", sans-serif;
+    --white: #fff;
+    --black: #0d0d0d;
+    --verdeObs: #12702e;
+    --verdeLi: #18903d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+    color: var(--white);
+}
+
+body {
+    content: "";
+    background-image: url("../assets/img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(24, 106, 144, 0.6);
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(13, 13, 13, 0.7);
+}
+
+.sidebar__logo {
+    width: 120px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.sidebar__username {
+    font-family: var(--fuente1);
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: block;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    margin: 20px auto 0 auto;
+    font-family: var(--fuente1);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: #186a90;
+    color: var(--white);
+    border: 0;
+    box-shadow: 0 4px 8px rgba(13, 13, 13, 0.5);
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #186a90;
+    background-color: #f2eddc;
+    border: 0;
+    box-shadow: 0 4px 8px rgba(13, 13, 13, 0.5);
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.graphic__title {
+    font-family: var(--fuente1);
+    font-size: 4.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.graphic-container {
+    width: 100%;
+}
+
+#chart {
+    background-color:  rgba(255, 255, 255, 0.9);
+}

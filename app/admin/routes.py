@@ -17,22 +17,25 @@ from flask_login import current_user
 from app import admin
 
 
+""" obtener nombre usuario """
+def get_current_username():
+    current_id = current_user.id
+    current_user_data = User.query.filter_by(id = current_id).first()
+    current_name = current_user_data.username.capitalize()
+
+    return current_name
+
 
 @login_manager.user_loader
 def load_user(user_id):
 
     return User.query.get(str(user_id))
 
-
 @admin_bp.route('/admin/home', methods=['GET'])
 @login_required
 def home():
-    
-    curren_id = current_user.id
-    
-    current_user_data = User.query.filter_by(id = curren_id).first()
 
-    current_name = current_user_data.username.capitalize()
+    current_name = get_current_username()
     
     try:
         
@@ -72,12 +75,19 @@ def home():
             return render_template('admin/home.html',
                            nombre = current_name,
                            marcador = False)
-   
+
 @admin_bp.route('/admin/registro', methods=['GET'])
 @login_required
 def registrar():
+    current_name = get_current_username()
     
-    return render_template('admin/registro.html')
+    return render_template('admin/registro.html', nombre = current_name)
+
+@admin_bp.route('/admin/editar', methods=['GET'])
+@login_required
+def editar():
+    current_name = get_current_username()
+    return render_template('admin/editar.html', nombre = current_name)
 
 @admin_bp.route('/api/v1/admin/registro', methods=['POST'])
 def registro():
@@ -117,7 +127,7 @@ def registro():
         
         return redirect(url_for('admin.home'), code = 302)
 
-     
+
 @admin_bp.route("/api/v1/auth/admin/logout",  methods=['GET'])
 @login_required
 def logout():

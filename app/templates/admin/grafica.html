@@ -1,42 +1,38 @@
-<section class="home__section">
-	<h4 class = "graphic__title">Grafica de sensores</h4>
-  <div class="graphic">
-      <div class="graphic__main">
-          <canvas id=chart  width="1500" height="720" ></canvas>
-          <script>
-              
-							let temdata = {{ temdata | safe }}
-							let labels = {{ labels | safe }}
-							let humdata = {{ humdata | safe }}
-
-              chart = new Chart(document.getElementById("chart"), {
-                  type: 'line',
-                  data: {
-										labels: labels,
-										datasets: [{
-											label: "Temperatura",
-											data: temdata,
-											borderColor: "#3e95cd",
-											backgroundColor: 'rgba(0, 0, 0, 0)',
-										},
-										{
-											label: "Humedad",
-											fontColor: "#3e95cd",
-											data: humdata,
-											borderColor: "#8e5ea2",
-											backgroundColor: 'rgba(0, 0, 0, 0)',
-										}]
-									},
-									options: {
-										responsive: true,
-										plugins: {
-											legend: {
-												position: 'center',
-											}
-										},
-									}
-              });
-          </script>
-      </div>
-  </div>
+<section class="home-section">
+	<h4 class="graphic__title">Grafica de sensores</h4>
+	<div class="graphic-container">
+		<canvas id=chart width="inherit" height="inherit"></canvas>
+		<script>
+			let temdata = {{ temdata | safe }}
+			let labels = {{ labels | safe }}
+			let humdata = {{ humdata | safe }}
+			chart = new Chart(document.getElementById("chart"), {
+				type: 'line',
+				data: {
+					labels: labels,
+					datasets: [{
+						label: "Temperatura",
+						data: temdata,
+						borderColor: "#3e95cd",
+						backgroundColor: 'rgba(0, 0, 0, 0)',
+					},
+					{
+						label: "Humedad",
+						fontColor: "#3e95cd",
+						data: humdata,
+						borderColor: "#8e5ea2",
+						backgroundColor: 'rgba(0, 0, 0, 0)',
+					}]
+				},
+				options: {
+					responsive: true,
+					plugins: {
+						legend: {
+							position: 'center',
+						}
+					},
+				}
+			});
+		</script>
+	</div>
 </section>
