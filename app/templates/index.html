@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+	<section class="login">
+		<img class="login__logo" src="../static/assets/img/logo.png" alt="Logo de Icontrol">
+		<h2 class="login__title">
+			IControl
+		</h2>
+		<div class="login__text">
+			<p>¡Bienvenido! <br> Por favor ingresa tus datos para continuar.</p>
+		</div>
+		<form class="login__form" action="/api/v1/public/login" method="POST" autocomplete="off">
+			<label class="login__form__label" for="username">
+				<input class="login__form__input" type="text" placeholder="Usuario" name="username"
+					oninput="handleValueChange()">
+			</label>
+			<label class="login__form__label" for="password">
+				<input class="login__form__input" type="password" placeholder="Contraseña" name="password">
+			</label>
+			<button class="button" type="submit">Ingresar</button>
+		</form>
+	</section>
+</main>
+{% endblock %}

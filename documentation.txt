@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "b1526d93-92a6-4a6b-8539-b510e406fd55",
+		"name": "db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000"
+						}
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.2 Python/3.8.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 May 2022 00:10:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"datos\": \"/api/v1/datos\",\n    \"formato\": \"json\",\n    \"integrantes\": \"Jessy Garcia, Luis Fernandez, Melanie Delgado, Jesus Hernandez, Migel Barrera\",\n    \"login\": \"/api/v1/login\",\n    \"message\": \"Proyecto de base de datos, control de un sistema de riego\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jessy",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sf23s2g4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "jessy",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "sf23s2g4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.2 Python/3.8.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 May 2022 00:09:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "session=.eJwlzjGOQjEMRdG9pJ4vJbYT22wGOU6emPYzVCP2DojiVrc5_-WKc99v5fJ3PvZPuf6ucingpkOXSjeiOdDDdLh2cWNWdiSjN6XoIwSyY_VghFXASWbqBiFpTSUSTZHKM6HvHRSinIOqW-aaGWLV3QEMCv60OpU35HHf51ezpPYdFYcPa4cY9AhWPZiba2qrtlt5vgColjfp.YoBEyQ.5gaQQaTxewpuw9NPngJE9hltBgw; HttpOnly; Path=/"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Login correcto\",\n    \"status\": \"True\"\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jessy3",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sf23s2g4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/registro",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"registro"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "jessy3",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "sf23s2g4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/v1/registro",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"registro"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.2 Python/3.8.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 May 2022 00:10:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Usuario registrado correctamente\",\n    \"status\": \"True\"\n}"
+						}
+					]
+				},
+				{
+					"name": "datos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "co2",
+									"value": "120",
+									"type": "text"
+								},
+								{
+									"key": "hum",
+									"value": "98",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/datos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"datos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get datos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/auth/admin/home",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"admin",
+								"home"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get datos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/v1/auth/admin/home",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"admin",
+										"home"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.2 Python/3.8.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 May 2022 00:10:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "586"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"co2\": 120,\n        \"datetime\": \"Sat, 14 May 2022 16:58:30 GMT\",\n        \"hum\": 98,\n        \"id\": \"ebcfa422-86ce-4acc-b282-1ba916de777d\"\n    },\n    {\n        \"co2\": 120,\n        \"datetime\": \"Sat, 14 May 2022 17:49:53 GMT\",\n        \"hum\": 98,\n        \"id\": \"edf800d7-ced2-4290-8662-788e7ca38151\"\n    },\n    {\n        \"co2\": 120,\n        \"datetime\": \"Sat, 14 May 2022 18:08:53 GMT\",\n        \"hum\": 98,\n        \"id\": \"ddf77f0f-ba4d-41d1-8db2-e7e44fc4e1bf\"\n    },\n    {\n        \"co2\": 120,\n        \"datetime\": \"Sat, 14 May 2022 18:09:13 GMT\",\n        \"hum\": 98,\n        \"id\": \"2e5c8cb1-a13c-4eef-86d4-844dfb6b026e\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/auth/admin/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/api/v1/auth/admin/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"admin",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.2 Python/3.8.13"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 15 May 2022 00:10:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "session=; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; HttpOnly; Path=/"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"True\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

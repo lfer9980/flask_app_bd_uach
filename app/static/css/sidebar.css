@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Merriweather+Sans:wght@400;500;700&display=swap");
+/* fuentes principales */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Merriweather+Sans:wght@400;500;700&display=swap");
+/* fuentes principales */
+
+:root {
+--fuente1: 'Merriweather', sans-serif;
+--fuente2: 'Lato', sans-serif;
+
+--white: #FFF;
+--black: #0D0D0D;
+
+--verdeObs: #12702E;
+--verdeLi: #18903D;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+html {
+    font-size: 62.5%;
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+    background-color: #12702E;
+    color: #FFF;
+  }
+  
+body {
+    display: flex;
+}
+  
+body::after {
+    content: "";
+    background: url("../assets/img/fondo.jpg");
+    background-position: center;
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.sidebar {
+	position: relative;
+	width: 270px;
+	height: 100vh;
+    background-color: rgba(24, 106, 144, 0.6);
+	text-align: center;
+	padding: 30px;
+	margin-right: 20px;
+	border-right: 1px solid var(--brownlight);
+	box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+}
+.sidebar__logo {
+	width: 120px;
+	height: auto;
+	margin: 20px auto;
+}
+.sidebar__username {
+	font-family: var(--fuente2);
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.sidebar__nav {
+	text-align: left;
+}
+
+.button--brown {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px auto;
+    background-color: var(--verdeObs);
+    border: 0;
+    box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+    cursor: pointer;
+}
+.button--brown a {
+    font-size: 1.6rem;
+    font-family: var(--fuente2);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.button--brown:hover {
+    background-color: var(--verdeLi);
+    border: 0;
+    box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+}
+
+.button--brown2 {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px auto;
+    background-color: var(--verdeObs);
+    border: 0;
+    box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+    cursor: pointer;
+}
+.button--brown2 a {
+    font-size: 1.6rem;
+    font-family: var(--fuente2);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.button--brown2:hover {
+    background-color: var(--verdeLi);
+    border: 0;
+    box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+}
